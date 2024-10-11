@@ -1,0 +1,15 @@
+@tailwind components;
+
+@layer components {
+    .chapter-toolbar {
+        @apply sticky top-2 z-[100] opacity-10 bg-slate-700 rounded gap-3 mb-10 p-2 transition-all ease-linear duration-300;
+        @apply hover:opacity-100;
+    }
+    
+    @media screen and (min-width: 500px) {
+        .toolbar-body {
+            @apply block;
+            @apply flex justify-between items-center sm:grow sm:justify-between sm:items-center;
+        }
+    }
+}

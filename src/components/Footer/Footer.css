@@ -1,0 +1,51 @@
+@tailwind components;
+
+@layer components {
+    .footer-container {
+        @apply w-full bg-slate-700 p-5 mt-12;
+    }
+    
+    .footer-subcontainer {
+        @apply flex flex-row justify-between gap-y-8;
+        @apply sm:flex-row sm:flex-grow sm:justify-around;
+    }
+    
+    @media only screen and (max-width: 400px){
+        .footer-subcontainer {
+            @apply flex flex-col;
+        }
+    }
+    
+    .footer-content {
+        @apply flex flex-col gap-y-8;
+        @apply sm:flex-row sm:justify-around;
+    }
+    
+    .footer-brand {
+        @apply block;
+    }
+    
+    .footer-brand .logo {
+        @apply w-12;
+    }
+    
+    .footer-brand .title {
+        @apply font-extrabold text-lg;
+    }
+    
+    .footer-brand .jargon {
+        @apply block font-semibold text-sm text-slate-400;
+    }
+    
+    .copyright {
+        @apply text-gray-400 text-sm;
+    }
+    
+    .footer-nav {
+        @apply flex flex-col gap-y-0.5;
+    }
+    
+    .nav-title {
+        @apply font-bold text-white mb-2;
+    }
+}

@@ -1,0 +1,42 @@
+@tailwind components;
+
+@layer components {
+    .verse-container {
+        @apply mb-10;
+        @apply sm:flex sm:flex-row-reverse sm:mb-16;
+    }
+    
+    .verse-body {
+        @apply border-b-2 border-b-slate-700 p-3;
+        @apply grow;
+    }
+    
+    .verse-script {
+        @apply text-right text-3xl leading-loose mb-5;
+    }
+    
+    .verse-transliteration {
+        @apply inline  text-slate-400 transition-all ease-linear duration-100;
+        @apply hover:text-white;
+    }
+    
+    .verse-translation {
+        @apply text-slate-200;
+    }
+    
+    .verse-toolbar {
+        @apply flex gap-3 p-3;
+        @apply sm:flex-col sm:justify-center;
+    }
+    
+    .toolbar-item {
+        @apply relative text-lg text-slate-400;
+        @apply hover:text-white;
+    }
+    
+    .item-tooltip {
+        @apply absolute left-1/2 -translate-x-1/2 opacity-0 bottom-8 text-sm bg-slate-700 rounded p-2 pointer-events-none transition-opacity ease-linear duration-300;
+        @apply group-hover:opacity-100;
+        @apply sm:bottom-1/2 sm:translate-y-1/2 sm:left-6 sm:translate-x-0;
+    }
+}

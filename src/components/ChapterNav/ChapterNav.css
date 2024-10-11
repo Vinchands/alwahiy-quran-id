@@ -1,0 +1,27 @@
+@tailwind components;
+
+@layer components {
+    .chapter-nav {
+        @apply bg-slate-700 rounded mb-1 p-1;
+    }
+    
+    .chapter-nav-container {
+        @apply flex justify-between items-center;
+    }
+    
+    .chapter-prev-next {
+        @apply relative;
+        @apply flex items-center shrink-0 opacity-75 text-center bg-slate-800 rounded px-3 py-2 transition-opacity ease-linear duration-100;
+        @apply hover:opacity-100;
+    }
+    
+    .tooltip-prev {
+        @apply absolute left-[6.5rem] z-[100] opacity-0 text-sm text-nowrap bg-slate-800 rounded p-1 pointer-events-none transition-opacity ease-linear duration-300;
+        @apply group-hover:opacity-100;
+    }
+    
+    .tooltip-next {
+        @apply absolute right-[6.5rem] z-[100] opacity-0 text-sm text-nowrap bg-slate-800 rounded p-1 pointer-events-none transition-opacity ease-linear duration-300;
+        @apply group-hover:opacity-100;
+    }
+}

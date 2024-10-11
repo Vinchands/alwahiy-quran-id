@@ -1,0 +1,15 @@
+@tailwind components;
+
+@layer components {
+    .bismillah-container {
+        @apply text-center mb-10;
+    }
+    
+    .bismillah-container .arabic {
+        @apply text-2xl leading-loose;
+    }
+    
+    .bismillah-container .translation {
+        @apply text-slate-400;
+    }
+}

@@ -1,0 +1,59 @@
+@tailwind components;
+
+@keyframes auto-scroll {
+    0% {
+        transform: translateX(0%);
+    }
+    
+    100% {
+        transform: translateX(-200%);
+    }
+}
+
+@layer components {
+    
+    .auto-scroll:hover {
+        animation: auto-scroll 5s linear backwards;
+    }
+    
+    .chapter-container {
+        @apply bg-slate-700 rounded-lg mb-3 p-2 transition-all ease-linear duration-100;
+        @apply hover:scale-105 hover:border-b-2 hover:border-cyan-500 hover:shadow-xl hover:shadow-cyan-800;
+    }
+
+    .chapter-body {
+        @apply flex justify-between items-center;
+    }
+
+    .chapter-left {
+        @apply flex items-center gap-2 flex-grow min-w-0;
+    }
+
+    .chapter-left .number {
+        @apply flex justify-center items-center min-w-12 min-h-12 font-serif bg-slate-800 rounded p-1;
+    }
+
+    .chapter-left .texts {
+        @apply relative max-w-full truncate;
+    }
+
+    .chapter-left .transliteration {
+        @apply block font-bold text-sm;
+    }
+
+    .chapter-left .translate {
+        @apply block text-sm text-slate-400;
+    }
+
+    .chapter-right {
+        @apply text-sm text-right flex-shrink-0 ml-2;
+    }
+
+    .chapter-right .arabic {
+        @apply font-serif text-2xl text-nowrap;
+    }
+
+    .chapter-right .verses-count {
+        @apply font-semibold text-xs text-slate-300;
+    }
+}
