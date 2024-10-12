@@ -2,24 +2,15 @@
 
 @layer components {
     .input-group {
-        @apply grid items-center text-black p-3;
-        @apply sm:flex;
+        @apply flex items-center text-black p-3;
     }
     
     .input-group-icon {
-        @apply hidden text-black bg-white border-none px-3 py-2;
-        @apply sm:block sm:flex-shrink-0 sm:rounded-l-full;
+        @apply flex-shrink-0 text-black bg-white rounded-l-full px-3 py-2;
     }
     
     .text-input {
-        @apply block border-none rounded-full px-3 py-2;
+        @apply flex-1 border-none rounded-r-full px-3 py-2;
         @apply focus:outline-none;
-        @apply sm:inline sm:flex-1 sm:rounded-none;
-    }
-    
-    .search-button {
-        @apply font-bold text-white bg-cyan-700 rounded-full mt-3 px-5 py-2;
-        @apply hover:bg-cyan-600;
-        @apply sm:rounded-none sm:rounded-r-full sm:m-0;
-    }
+    }   
 }

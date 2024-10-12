@@ -20,7 +20,6 @@ export default function ChapterNav({ chapter }) {
                                     { chapterPrev.nomor }. { chapterPrev.namaLatin }
                                 </h3>
                             </div>
-                            <div className='tooltip-prev'>Surah Sebelumnya</div>
                         </Link>
                     }
                     <div className='chapter-name grow text-center'>
@@ -39,7 +38,6 @@ export default function ChapterNav({ chapter }) {
                                 </h3>
                             </div>
                             <i className='bi bi-chevron-compact-right'></i>
-                            <div className='tooltip-next'>Surah Berikutnya</div>
                         </Link>
                     }
                 </nav>

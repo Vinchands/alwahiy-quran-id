@@ -1,7 +1,7 @@
 import Bismillah from '@components/Bismillah/Bismillah'
 import Verse from '@components/Verse/Verse'
 
-export default function FilterableVerseList({ chapter, toVerse, searchQuery, transliteration, translation }) {
+export default function FilterableVerseList({ chapter, searchQuery, transliteration, translation }) {
     
     const filteredVerses = chapter.ayat
         .filter(
@@ -25,10 +25,8 @@ export default function FilterableVerseList({ chapter, toVerse, searchQuery, tra
                     Ditemukan { filteredVerses.length } ayat dengan <span className='font-extrabold text-xl'>&quot;{ searchQuery }&quot;</span>
                 </h1>
             }
-            <Bismillah chapterNumber={ chapter.nomorSurah } />
-            <div className='verses-container'>
-                { filteredVerses.length !== 0? filteredVerses : fullVerses }
-            </div>
+            <Bismillah chapterNumber={ chapter.nomor } />
+            { filteredVerses.length > 0? filteredVerses : fullVerses }
         </div>
     )
 }

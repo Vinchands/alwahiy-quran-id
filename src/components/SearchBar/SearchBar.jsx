@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './SearchBar.css'
 
-export default function SearchBar() {
+export default function SearchBar({ onSearch }) {
     
     const [query, setQuery] = useState('')
     
@@ -14,8 +14,8 @@ export default function SearchBar() {
                 name='query' 
                 id='query'
                 className='text-input'
-                placeholder='Cari nama surah atau teks...' />
-            <button className='search-button'>Cari</button>
+                placeholder='Cari nama surah atau teks...'
+                onChange={ e => onSearch(e.target.value) } />
         </div>
     )
 }

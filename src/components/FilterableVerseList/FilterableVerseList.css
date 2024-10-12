@@ -7,10 +7,6 @@
     
     .search-result {
         @apply font-semibold mb-10;
-        @apply md:mb-3;
+        @apply md:mb-5;
     }
-    
-    .verses-container {
-        @apply max-w-[1000px] mx-auto p-2;
-    }   
 }

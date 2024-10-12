@@ -41,7 +41,7 @@ const router = createBrowserRouter([
     {
         path: '*',
         element: <Navigate to='/home' />
-    }
+    },
 ])
 
 createRoot(document.getElementById('root')).render(
