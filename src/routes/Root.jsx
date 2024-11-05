@@ -6,7 +6,7 @@ export default function Root() {
     return (
         <div className='flex flex-col min-h-screen align-bottom'>
             <Navbar />
-            <div id='page' className='flex-grow p-3'>
+            <div id='page' className='flex-grow'>
                 <Outlet />
             </div>
             <Footer />

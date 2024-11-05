@@ -14,7 +14,7 @@ export default function SearchBar({ onSearch }) {
                 name='query' 
                 id='query'
                 className='text-input'
-                placeholder='Cari nama surah atau teks...'
+                placeholder='Cari nama surah...'
                 onChange={ e => onSearch(e.target.value) } />
         </div>
     )

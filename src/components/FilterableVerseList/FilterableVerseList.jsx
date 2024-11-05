@@ -1,32 +1,40 @@
 import Bismillah from '@components/Bismillah/Bismillah'
 import Verse from '@components/Verse/Verse'
+import { ChapterContext } from '@contexts/ChapterContext'
+import { useContext } from 'react'
 
-export default function FilterableVerseList({ chapter, searchQuery, transliteration, translation }) {
+export default function FilterableVerseList({ searchQuery }) {
     
-    const filteredVerses = chapter.ayat
+    const chapter = useContext(ChapterContext)
+    
+    // * Verses and tafsirs related state(s)
+    const { ayat, tafsir } = chapter
+    const versesWithTafsirs = ayat.map((verse, i) => ({ ayat: verse, tafsir: tafsir[i] }))
+    
+    // * Filtered verses based on search query, and render them accordingly.
+    const filtered = versesWithTafsirs
         .filter(
-            verse => verse.teksIndonesia.toLowerCase().includes(searchQuery.toLowerCase())
+            ({ ayat }) => ayat.teksIndonesia.toLowerCase().includes(searchQuery.toLowerCase())
         )
-        .map(verse =>
-            <Verse key={ verse.nomorAyat } 
-                chapter={ chapter } 
-                verse={ verse } 
-                transliteration={ transliteration } 
-                translation={ translation } />
+        .map(({ ayat, tafsir }, i) =>
+            <Verse key={ i } verse={ ayat } tafsir={ tafsir } />
         )
     
-    const fullVerses = chapter.ayat.map(verse => <Verse key={ verse.nomorAyat } chapter={ chapter } verse={ verse } transliteration={ transliteration } translation={ translation } /> )
+    // * Render all verses if no search query or result available.
+    const full = versesWithTafsirs.map(({ ayat, tafsir }, i) =>
+        <Verse key={ i } verse={ ayat } tafsir={ tafsir } />
+    )
     
     return (
         <div className='filterable-verses'>
             {
                 searchQuery &&
                 <h1 className='search-result'>
-                    Ditemukan { filteredVerses.length } ayat dengan <span className='font-extrabold text-xl'>&quot;{ searchQuery }&quot;</span>
+                    Ditemukan { filtered.length } ayat dengan <span className='font-extrabold text-xl'>&quot;{ searchQuery }&quot;</span>
                 </h1>
             }
             <Bismillah chapterNumber={ chapter.nomor } />
-            { filteredVerses.length > 0? filteredVerses : fullVerses }
+            { filtered.length > 0? filtered : full }
         </div>
     )
 }

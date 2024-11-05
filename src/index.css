@@ -2,17 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-    font-family: 'Uthmani Hafs';
-    src: url('./assets/fonts/font-lpmq.ttf') format('truetype'); /* Sesuaikan path sesuai lokasi font */
-    font-weight: normal;
-    font-style: normal;
+html {
+    scroll-behavior: smooth;
 }
 
 body {
     @apply text-white bg-slate-800;
     scrollbar-width: 0.5rem;
     scrollbar-color: #4b5563 #374151;
+}
+
+@font-face {
+    font-family: 'Uthmani Hafs';
+    src: url('./assets/fonts/font-lpmq.ttf') format('truetype'); /* Sesuaikan path sesuai lokasi font */
+    font-weight: normal;
+    font-style: normal;
 }
 
 .font-uthmani {

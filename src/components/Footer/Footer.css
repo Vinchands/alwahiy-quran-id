@@ -2,7 +2,7 @@
 
 @layer components {
     .footer-container {
-        @apply w-full bg-slate-700 p-5 mt-12;
+        @apply w-full z-[100] bg-slate-700 p-5;
     }
     
     .footer-subcontainer {

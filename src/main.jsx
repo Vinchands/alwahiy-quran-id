@@ -6,7 +6,8 @@ import Home from '@pages/Home'
 import Baca from '@pages/Baca'
 import BacaSurah from '@pages/BacaSurah'
 import Tentang from '@pages/Tentang'
-import { chaptersLoader, versesLoader } from '@routes/loaders'
+import Pengaturan from '@pages/Pengaturan'
+import { chaptersLoader, versesWithTafsirsLoader } from '@routes/loaders'
 import './index.css'
 
 const router = createBrowserRouter([
@@ -26,11 +27,15 @@ const router = createBrowserRouter([
             {
                 path: 'baca/surah/:surah',
                 element: <BacaSurah />,
-                loader: versesLoader
+                loader: versesWithTafsirsLoader
             },
             {
                 path: 'tentang',
                 element: <Tentang />
+            },
+            {
+                path: 'pengaturan',
+                element: <Pengaturan />
             },
             {
                 path: '/',

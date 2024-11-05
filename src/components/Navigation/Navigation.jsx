@@ -5,7 +5,6 @@ export default function Navigation() {
     
     function getNavLinkClass({ isActive }) {
         const className = `nav-item ${isActive? 'nav-item-active' : ''} group`
-        // alert(isActive)
         return className
     }
     
@@ -30,7 +29,14 @@ export default function Navigation() {
                 className={ getNavLinkClass }>
                 <i className='bi bi-info-circle nav-item-icon'></i>
                 <span className='nav-item-text'>Tentang</span>
-                <div className='nav-item-tooltip last-item'>Tentang</div>
+                <div className='nav-item-tooltip'>Tentang</div>
+            </NavLink>
+            <NavLink 
+                to='/pengaturan'
+                className={ getNavLinkClass }>
+                <i className='bi bi-gear-fill nav-item-icon'></i>
+                <span className='nav-item-text'>Pengaturan</span>
+                <div className='nav-item-tooltip last-item'>Pengaturan</div>
             </NavLink>
         </>
     )

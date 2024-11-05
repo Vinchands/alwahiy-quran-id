@@ -2,7 +2,9 @@
 
 @layer components {
     .chapter-toolbar {
-        @apply sticky top-2 z-[100] bg-slate-700 rounded gap-3 mb-10 p-2;
+        @apply sticky top-2 z-[75] opacity-20 bg-slate-700 rounded gap-3 mb-10 p-2 transition-opacity ease-linear duration-100;
+        @apply hover:opacity-100;
+        @apply sm:opacity-100;
     }
     
     @media screen and (min-width: 500px) {

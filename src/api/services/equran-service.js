@@ -21,3 +21,14 @@ export async function getVerses(chapter) {
         throw new Error(`Error fetching API: ${error.message}`)
     }
 }
+
+export async function getTafsirs(chapter) {
+    try {
+        const response = await apiClient.get(`/tafsir/${chapter}`)
+        return response.data
+    }
+    
+    catch (error) {
+        throw new Error(`Error fetching API: ${error.message}`)
+    }
+}

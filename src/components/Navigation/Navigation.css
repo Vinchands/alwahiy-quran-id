@@ -22,13 +22,13 @@
     }
     
     .nav-item-tooltip {
-        @apply absolute top-8 opacity-0 left-1/2 transform -translate-x-1/2 font-medium text-sm text-nowrap bg-slate-700 rounded-md shadow-sm p-2 transition-all ease-linear duration-300;
+        @apply absolute top-8 right-1/2 transform translate-x-1/2 opacity-0 font-medium text-sm text-nowrap bg-slate-700 rounded-md shadow-sm p-2 transition-all ease-linear duration-300;
         @apply hover:hidden pointer-events-none;
         @apply group-hover:opacity-100;
         @apply sm:hidden;
     }
     
     .last-item {
-        @apply left-0;
+        @apply right-0 transform translate-x-1;
     }
 }

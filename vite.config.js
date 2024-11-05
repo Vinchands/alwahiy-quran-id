@@ -9,6 +9,7 @@ export default defineConfig({
             '@': resolve(__dirname, './src'),
             '@assets': resolve(__dirname, './src/assets'),
             '@components': resolve(__dirname, './src/components'),
+            '@contexts': resolve(__dirname, './src/contexts'),
             '@pages': resolve(__dirname, './src/pages'),
             '@routes': resolve(__dirname, './src/routes'),
             '@utils': resolve(__dirname, './src/api/utils'),
