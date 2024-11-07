@@ -4,7 +4,7 @@ import FilterableVerseList from '@components/FilterableVerseList/FilterableVerse
 import BackToTopButton from '@components/BackToTopButton/BackToTopButton'
 import CopyButton from '@components/CopyButton/CopyButton'
 import Modal, { ModalHeader, ModalBody, ModalFooter } from '@components/Modal/Modal'
-import { useNavigate, useLoaderData } from 'react-router-dom'
+import { useNavigate, useLoaderData, useParams } from 'react-router-dom'
 import { ChapterProvider } from '@contexts/ChapterContext'
 import { CurrentAudioProvider } from '../contexts/CurrentAudioContext'
 import { useState, useEffect } from 'react'
@@ -13,6 +13,7 @@ import { getChapters } from '@services/equran-service'
 export default function BacaSurah() {
     
     const chapter = useLoaderData()
+    const { surah } = useParams()
     const navigate = useNavigate()
     
     // * Audio related state(s)
@@ -95,12 +96,13 @@ export default function BacaSurah() {
                         value={ toVerse } 
                         onChange={ e => setToVerse(e.target.value) } 
                         onKeyDown={ e => { if (e.key === 'Enter') handleScrollVerse() } } />
-                    <button 
-                        className='text-sm text-slate-100 bg-cyan-800 rounded p-2 hover:bg-cyan-700'
-                        onClick={ handleScrollVerse }>
+                    {
+                        toVerse &&
+                        <button className='text-sm text-slate-100 bg-cyan-800 rounded p-2 hover:bg-cyan-700' onClick={ handleScrollVerse }>
                             <span className='hidden sm:inline'>Pergi</span>
                             <i className='bi bi-arrow-return-left sm:hidden'></i>
                         </button>
+                    }
                 </div>
             </ChapterToolbar>
             <Modal isOpen={ isModalOpen } onClose={ closeModal }>

@@ -111,7 +111,7 @@ export default function Home() {
                         <br />
                         <p className='text-justify'>
                             Setelah peristiwa tersebut, ayat-ayat dalam Al-Qur&apos;an selanjutnya diturunkan secara bertahap, biasanya sesuai dengan permasalahan yang dihadapi oleh Rasulullah ﷺ atau para sahabat pada saat itu.
-                            Hal ini terjadi dalam kurun waktu kurang lebih 23 tahun  hingga wafatnya Nabi Muhammad ﷺ.
+                            Hal ini berlangsung dalam kurun waktu kurang lebih 23 tahun  hingga wafatnya Nabi Muhammad ﷺ.
                             Sebagai contoh, beberapa ayat yang diturunkan setelah peristiwa di Gua Hira adalah <Link className='font-semibold' to='/baca/surah/74'>7 ayat pertama surah Al-Muddatssir</Link>.
                             Ketujuh ayat tersebut berisi perintah agar Nabi Muhammad ﷺ bangun untuk memulai mendakwahkan Islam, karena pada saat itu beliau sedang menggigil berselimut setelah menerima wahyu pertama di Gua Hira disebabkan melihat wujud asli malaikat Jibril.
                         </p>

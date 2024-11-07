@@ -38,7 +38,10 @@ export default function Verse({ verse, tafsir }) {
         <>
             <div id={ `ayat${verse.nomorAyat}` } className='verse-container'>
                 <div className='verse-body'>
-                    <p className='verse-script font-uthmani'>{ verse.teksArab } { arabicNumerals(verse.nomorAyat) }</p>
+                    <p className='verse-script font-uthmani'>
+                        { verse.teksArab } &nbsp;
+                        <span className='text-4xl'>{ arabicNumerals(verse.nomorAyat) }</span>
+                    </p>
                     { showTransliteration.current && <p className='verse-transliteration'>{ verse.nomorAyat }. { verse.teksLatin }</p> }
                     { showTranslation.current && <p className='verse-translation'>{ verse.nomorAyat }. { verse.teksIndonesia }</p> }
                 </div>

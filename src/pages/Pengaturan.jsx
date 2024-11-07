@@ -39,6 +39,7 @@ export default function Pengaturan() {
     }
     
     useEffect(() => {
+        document.title = 'Al-Wahiy - Pengaturan'
         localStorage.setItem('qoriId', qoriId)
         localStorage.setItem('showToolbar', JSON.stringify(showToolbar))
         localStorage.setItem('showTransliteration', JSON.stringify(showTransliteration))
