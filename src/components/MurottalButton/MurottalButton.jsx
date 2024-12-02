@@ -28,7 +28,7 @@ export default function MurottalButton({ verse }) {
     
         // Untuk memutar audio bergilir
         for (const item of ayat.slice(verse.nomorAyat - 1)) {
-            const audio = new Audio(item.audio[qoriId.current])
+            const audio = new Audio(item.audio[qoriId.current || '01'])
             
             // * Waiting for the audio to be loaded
             await new Promise((resolve) => {
