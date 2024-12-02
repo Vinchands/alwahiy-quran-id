@@ -5,7 +5,7 @@ export default function Pengaturan() {
     
     const toolbar = JSON.parse(localStorage.getItem('showToolbar'))
     const transliteration = JSON.parse(localStorage.getItem('showTransliteration'))
-    const translation = JSON.parse(localStorage.getItem('showTranslation'))
+    const translation = JSON.parse(localStorage.getItem('showTranslation')) || true
     
     const [qoriId, setQoriId] = useState(localStorage.getItem('qoriId'))
     const [showToolbar, setShowToolbar] = useState(toolbar)
