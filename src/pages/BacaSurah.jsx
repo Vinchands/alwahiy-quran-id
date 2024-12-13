@@ -47,7 +47,7 @@ export default function BacaSurah() {
     }
     
     useEffect(() => {
-        document.title = `Al-Wahiy - ${chapter.namaLatin}`
+        document.title = `Al-Wahiy - Surah ${chapter.namaLatin}`
         
         // * Fetch chapters list
         async function foo() {
